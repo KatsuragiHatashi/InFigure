@@ -1,1 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>InFigure | Contact Us</title>
+	<link rel="icon" href="C:\Users\202310714\Downloads\WEBDESIGN-20240519T231027Z-001\WEBDESIGN\PICTURES\InFigure.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		/* Background Image */
+		body {
+			overflow-x: hidden;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			background-color: #7fc3e1;
+			background-image: linear-gradient(transparent, transparent, #7fc3e1, #7fc3e1), url("https://i.pinimg.com/736x/68/fd/64/68fd641e143e87a5bf9f999d315b9f68.jpg");
+			background-position: left top;
+			background-size: 120%;
+			background-repeat: no-repeat;
+		}
+		/* Universal CSS START */
+		.header {
+			position: fixed;
+			height: 5%;
+			background-color: #0c2b43;
+			padding: 10px 16px;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			align-items: center;
+			display: flex;
+			z-index: 999;
+		}
+		.header input[type=text] {
+			margin-left: 300px;
+			background-color: #f1f1f1;
+			width: 500px;
+			height: 15px;
+			padding: 10px;
+			border: 2px solid white;
+			border-radius: 5px;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		.header input[type=text]:focus {
+			background-color: #f1f1f1;
+			outline-color: #7fc3e1;
+			box-shadow: -1px 2px 30px #7fc3e1;
+			transition: .1s;
+			transition-property: box-shadow;
+		}
+		.header button {
+			float: left;
+			width: 3%;
+			padding: 10px;
+			background-color: #2f96d0;
+			color: white;
+			font-size: 16px;
+			border: none;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			cursor: pointer;
+		}
+		.header button:hover {
+			background-color: #2B8ABF;
+		}
+		.logo {
+			margin-left: 60px;
+		}
+		.sidebar {
+			height: 100%;
+			width: 50px;
+			background-color: #f1f1f1;
+			position: fixed;
+			list-style-type: none;
+			top: 0;
+			overflow-x: hidden;
+			padding-top: 54px;
+			transition: 0.5s;
+			z-index: 998;
+		}
+		.sidebar.active {
+			width: 180px;
+		}
+		#sidebar-toggle {
+			color: #f1f1f1;
+			cursor: pointer;
+			position: absolute;
+			display: flex;
+			padding: 20px 20px 20px 20px;
+			transform: translateX(-33%);
+		}
+		#sidebar-toggle:hover {
+			color: #D7D7D7;
+		}
+		.sidebar a {
+			position: relative;
+			display: flex;
+			color: #000;
+			padding: 10px 16px;
+			text-decoration: none;
+			transition: 0.3s;
+			align-items: center;
+			white-space: nowrap;
+		}
+		.sidebar a i {
+			height: 50px;
+			min-width: 40px;
+			line-height: 50px;
+		}
+		.sidebar a:hover {
+			background-color: #555;
+			color: #f1f1f1;
+		}
+		.footer {
+			background-color: #07171e;
+			padding: 70px 0;
+			margin-top: auto;
+		}
+		.footer-cont {
+			max-width: 1170px;
+			margin: auto;
+		}
+		.footer-row {
+			display: flex;
+		}
+		.footer-col {
+			width: 25%;
+			padding: 0 15px;
+		}
+		.footer-col h4 {
+			font-size: 18px;
+			color: #f1f1f1;
+			text-transform: capitalize;
+			margin-bottom: 35px;
+			font-weight: bold;
+			position: relative;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+		.footer-col h4::before {
+			content: ' ';
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+			background-color: #7fc3e1;
+			height: 2px;
+			box-sizing: border-box;
+			width: 80px;
+		}
+		.footer ul {
+			list-style: none;
+		}
+		.footer-col ul li:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		.footer-col ul li a {
+			font-size: 16px;
+			text-transform: capitalize;
+			text-decoration: none;
+			font-weight: bold;
+			color: #bbbbbb;
+			display: inline-block;
+			transition: all 0.3s ease;
+		}
+		.footer-col ul li a:hover {
+			color: #f1f1f1;
+			padding-left: 8px;
+		}
+		.footer-col .socials a {
+			color: #bbbbbb;
+			display: inline-flex;
+			margin: 0 10px 10px 0;
+			transition: all 0.5s ease;
+			text-decoration: none;
+			align-items: center;
+		}
+		.footer-col .socials a:hover {
+			color: #f1f1f1;
+		}
+		.footer-col .socials a i {
+			min-width: 50px;
+		}
+		.footer2 {
+			background-color: #0b242e;
+			color: #f1f1f1;
+			padding: 20px 0;
+			text-align: center;
+		}
+		/* Universal CSS END */
+		
+		.contact {
+			/* section */
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 80px; /* Adjust this value to move the section down */
+			flex-grow: 1;
+		}
+		
+		.contactin {
+			/* main contact div */
+			width: 80%;
+			height: auto;
+			margin: auto;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			border-radius: 10px;
+			background: #fff;
+			box-shadow: 0px 0px 10px 0px #666;
+		}
+		
+		.contactmap {
+			/* map */
+			width: 100%;
+			height: auto;
+			flex: 50%;
+		}
+		
+		.contactmap iframe {
+			/* map iframe */
+			width: 100%;
+			height: 100%;
+		}
+		
+		.contactform {
+			/* form */
+			width: 100%;
+			height: auto;
+			flex: 50%;
+			text-align: center;
+			padding: 0px 0px 0px 0px;
+		}
+		
+		.contactform h1 {
+			/* h1 */
+			margin-bottom: 10px;
+		}
+		
+		.contactformtxt {
+			/* name/email */
+			width: 100%;
+			height: 40px;
+			color: #000;
+			border: 2px solid #0c2b43;
+			border-radius: 10px;
+			outline: none;
+			margin-bottom: 20px;
+			padding: 0px;
+		}
+		
+		.contactformtxt::placeholder {
+			/* form color */
+			color: #aaa;
+		}
+		
+		.contactformtxtarea {
+			/* message */
+			width: 100%;
+			height: 130px;
+			color: #000;
+			border: 2px solid #0c2b43;
+			border-radius: 10px;
+			outline: none;
+			margin-bottom: 20px;
+			padding: 0px;
+		}
+		
+		.contactformtxtarea::placeholder {
+			/* message color */
+			color: #aaa;
+		}
+		 
+		.contactformbtn {
+			/* button */
+			width: 100%;
+			border: none;
+			outline: none;
+			border-radius: 10px;
+			background: #0c2b43;
+			color: #fff;
+			text-transform: uppercase;
+			padding: 10px 0;
+			cursor: pointer;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Universal HTML START -->
+	<div class="header">
+		<!-- Header -->
+		<i class="fas fa-bars fa-lg" id="sidebar-toggle"></i>
+		<!-- Sidebar toggle icon -->
+		<a href="home.html" class="logo"><img src="C:\Users\202310714\Downloads\WEBDESIGN-20240519T231027Z-001\WEBDESIGN\PICTURES\InFigure.png" width="120" height="auto"></a>
+		<!-- Logo -->
+		<input type="text" placeholder="Search...">
+		<!-- Search bar -->
+		<button type="submit"><i class="fas fa-search fa-lg"></i></button>
+		<!-- Search bar icon -->
+	</div>
+	<ul class="sidebar" id="sidebar">
+		<!-- Sidebar -->
+		<li><a href="home.html"><i class="fas fa-home "></i>Home</a></li>
+		<li><a href="home.html#services"><i class="fas fa-cogs"></i>Services</a></li>
+		<li><a href="shop.html"><i class="fas fa-shopping-basket"></i>Shop</a></li>
+		<li><a href="about.html"><i class="fas fa-users"></i>About Us</a></li>
+		<li><a href="contact.html"><i class="fas fa-envelope"></i>Contact Us</a></li>
+	</ul>
+	<!-- Universal HTML END -->
+	
+	<section class="contact" id="Contact">
+		<div class="contactin">
+			<div class="contactmap">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.2033941506793!2d120.98304067408006!3d14.587483077399723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca20f5c0aea9%3A0x52dea1e12d0145a0!2sAdamson%20University%20-%20(AdU)!5e0!3m2!1sen!2sph!4v1715476041611!5m2!1sen!2sph"
+				 width="100%" height="auto" style="border:0;" allowfullscreen="" 
+				 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			<div class="contactform">
+				<h1> Contact Us</h1>
+				<form>
+					<input type="text" placeholder=" Name" class="contactformtxt" />
+					<input type="text" placeholder=" Email" class="contactformtxt" />
+					<textarea placeholder=" Message" class="contactformtxtarea"></textarea>
+					<input type="Submit" name="Submit" class="contactformbtn" />
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- Universal HTML Footer START -->
+	<footer class="footer">
+		<div class="footer-cont">
+			<div class="footer-row">
+				<div class="footer-col">
+					<h4>InFigure</h4>
+					<ul>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="home.html#services">Services</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Shop</h4>
+					<ul>
+						<li><a href="shop.html">Model Kits</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Support</h4>
+					<ul>
+						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="home.html#newsletter">Newsletter</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Follow Us</h4>
+					<div class="socials">
+						<a href="https://www.facebook.com/KenGementiza.2004"><i class="fab fa-facebook fa-2x"></i>Ken Reigo Gementiza</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="footer2">
+		<p>© 2024, InFigure. All Rights Reserved.</p>
+	</footer>
+	<!-- Universal HTML Footer END -->
+	<script>
+		// Universal JS START
+		// Sidebar
+		let toggleSidebar = document.querySelector("#sidebar-toggle");
+		let sidebar = document.querySelector(".sidebar");
+
+		toggleSidebar.onclick = function () {
+			sidebar.classList.toggle("active");
+		}
+		// Universal JS END
+	</script>
+</body>
+</html>
 
